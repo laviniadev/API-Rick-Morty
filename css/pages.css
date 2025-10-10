@@ -1,0 +1,359 @@
+* {
+  font-family: 'Roboto', sans-serif;
+}
+
+
+/* =========================
+   PÁGINA DE DETALHE DO PERSONAGEM
+========================= */
+
+.image-container {
+  display: flex;
+  justify-content: center; 
+  align-items: center;    
+  width: 100%;
+  padding: 1rem 0;       
+  margin: 0 auto;
+}
+
+.image-container img {
+  max-width: 40%;       
+  max-height: 60vh;       
+  height: auto;           
+  border-radius: 15px;    
+  box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+  display: block;
+  object-fit: cover;       /* garante boa proporção mesmo se container mudar */
+}
+
+#detail {
+  max-width: 1200px;
+  margin: 1rem auto;
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  text-align: center;
+  gap: 2rem;
+}
+
+/* =========================
+   IMAGEM DO PERSONAGEM COM BORDA ANIMADA
+========================= */
+#detail .character-image {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%; /* borda circular */
+  object-fit: cover;
+  display: block;
+  padding: 20px; 
+  background: linear-gradient(45deg, aqua, cyan, deepskyblue, aqua);
+  background-size: 300% 300%;
+  -webkit-mask: radial-gradient(farthest-side, #000 80%, transparent 100%);
+  mask: radial-gradient(farthest-side, #000 80%, transparent 100%);
+  animation: border-anim 3s linear infinite;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+/* =========================
+   ANIMAÇÃO DA BORDA
+========================= */
+@keyframes border-anim {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Para WebKit */
+@-webkit-keyframes border-anim {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+
+/* CONTAINER DAS DUAS COLUNAS CENTRALIZADO */
+#detail .character-columns {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+  max-width: 1000px;
+  width: 100%;
+}
+
+/* COLUNA DE INFORMAÇÕES */
+#detail .character-info {
+  padding: 0 2rem 1rem 2rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  background-color: #fdfdfd;
+  min-width: 250px;
+  max-width: 400px;
+  text-align: left; 
+  margin: 0 auto; 
+}
+
+/* COLUNA DE EPISÓDIOS */
+#detail .character-episodes {
+  padding: 0 2rem 1rem 2rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  background-color: #fdfdfd;
+  min-width: 300px;
+  max-width: 500px;
+  text-align: left; 
+  margin: 0 auto; 
+}
+
+/*_________________________________________________________*/
+
+#detail .episode-container {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+  max-width: 1000px;
+  width: 100%;
+}
+
+#detail .episode-info {
+  padding: 0 2rem 1rem 2rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  background-color: #fdfdfd;
+  min-width: 250px;
+  max-width: 400px;
+  text-align: left;
+  margin: 0 auto;
+}
+
+/* COLUNA DE EPISÓDIOS */
+#detail .episode-characters {
+  padding: 0 2rem 1rem 2rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  background-color: #fdfdfd;
+  min-width: 300px;
+  max-width: 500px;
+  text-align: left;
+  margin: 0 auto;
+}
+
+/*_________________________________________________________*/
+
+#detail .location-container {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+  max-width: 1000px;
+  width: 100%;
+}
+
+#detail .location-info {
+  padding: 0 2rem 1rem 2rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  background-color: #fdfdfd;
+  min-width: 250px;
+  max-width: 400px;
+  text-align: left;
+  margin: 0 auto;
+}
+
+/* COLUNA DE RESIDENTES */
+#detail .location-residents {
+  padding: 0 2rem 1rem 2rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  background-color: #fdfdfd;
+  min-width: 300px;
+  max-width: 500px;
+  text-align: left; 
+  margin: 0 auto;
+}
+
+/* TÍTULOS */
+#detail h2 {
+  margin-bottom: 1.2rem;
+  color: #333;
+  font-size: 1.2rem;
+}
+
+/* LISTAS */
+#detail ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: left; 
+}
+
+#detail li {
+  margin-bottom: 0.8rem;
+  font-size: 1rem;
+  color: #555;
+}
+
+/* BOTÃO DE VOLTAR */
+#detail .back-button {
+  margin-top: 2rem;
+  text-align: left; 
+}
+
+#detail .back-button a {
+  text-decoration: none;
+  color: #fff;
+  background-color: #00bfff;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+  display: inline-block; 
+}
+
+#detail .back-button a:hover {
+  background-color: #0099cc;
+}
+
+
+/* =========================
+   RESPONSIVIDADE COMPLETA
+========================= */
+
+@media (max-width: 1024px) {
+  #detail .character-columns,
+  #detail .episode-container,
+  #detail .location-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #detail .character-image {
+    width: 180px;
+    height: 180px;
+  }
+
+  #detail .character-info,
+  #detail .character-episodes,
+  #detail .episode-info,
+  #detail .episode-characters,
+  #detail .location-info,
+  #detail .location-residents {
+    width: 100%;
+    max-width: 600px;
+  }
+
+  .image-container img {
+    max-width: 50%;
+    max-height: 55vh;
+  }
+}
+
+@media (max-width: 768px) {
+  .image-container img {
+    max-width: 60%;
+    max-height: 50vh;
+  }
+
+  #detail .character-image {
+    width: 160px;
+    height: 160px;
+  }
+
+  #detail h2 {
+    font-size: 1.1rem;
+  }
+
+  #detail li {
+    font-size: 0.95rem;
+  }
+
+  #detail .character-info,
+  #detail .character-episodes,
+  #detail .episode-info,
+  #detail .episode-characters,
+  #detail .location-info,
+  #detail .location-residents {
+    padding: 1rem;
+    margin: 0.5rem 0;
+  }
+
+  #detail .back-button a {
+    padding: 0.5rem 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .image-container img {
+    max-width: 80%;
+    max-height: 40vh;
+  }
+
+  #detail .character-image {
+    width: 120px;
+    height: 120px;
+    padding: 15px;
+  }
+
+  #detail h2 {
+    font-size: 1rem;
+  }
+
+  #detail li {
+    font-size: 0.9rem;
+  }
+
+  #detail .character-info,
+  #detail .character-episodes,
+  #detail .episode-info,
+  #detail .episode-characters,
+  #detail .location-info,
+  #detail .location-residents {
+    padding: 0.8rem;
+    margin: 0.4rem 0;
+  }
+
+  #detail .back-button a {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .image-container img {
+    max-width: 90%;
+    max-height: 35vh;
+  }
+
+  #detail .character-image {
+    width: 100px;
+    height: 100px;
+    padding: 10px;
+  }
+
+  #detail h2 {
+    font-size: 0.95rem;
+  }
+
+  #detail li {
+    font-size: 0.85rem;
+  }
+
+  #detail .character-info,
+  #detail .character-episodes,
+  #detail .episode-info,
+  #detail .episode-characters,
+  #detail .location-info,
+  #detail .location-residents {
+    padding: 0.6rem;
+    margin: 0.3rem 0;
+  }
+
+  #detail .back-button a {
+    padding: 0.35rem 0.7rem;
+    font-size: 0.85rem;
+  }
+}
