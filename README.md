@@ -75,3 +75,5 @@ Desenvolvido por **Lavinia Ogawa**
 Curso de Análise e Desenvolvimento de Sistemas - Universidade Ceuma  
 [LinkedIn](https://linkedin.com/in/laviniaogawa) | [Instagram](https://instagram.com/lavhtrs) | [WhatsApp](https://wa.me/5598987524881)
 
+Acesse o Site aqui: (https://laviniadev.github.io/API-Rick-Morty/)
+
